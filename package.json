@@ -1,6 +1,6 @@
 {
   "name": "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "engines": {
     "node": ">16.13.0"
   },
