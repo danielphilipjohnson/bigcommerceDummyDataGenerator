@@ -1,28 +1,25 @@
 {
-	"compilerOptions": {
-	  "target": "ES2015",
-	  "module": "ES2020",
-	  "lib": ["es6", "esnext", "es2016", "dom", "dom.iterable", "scripthost"],
-	  "declaration": true,
-	  "sourceMap": true,
-	  "outDir": "dist/esm",
-	  "rootDir": "src",
-	  "importHelpers": true,
-	  "strict": true,
-	  "noImplicitAny": true,
-	  "moduleResolution": "node",
-	  "baseUrl": ".",
-	  "paths": {
-		"@/*": ["src/*"]
-	  },
-	  "types": ["node"],
-	  "allowSyntheticDefaultImports": true,
-	  "esModuleInterop": true,
-	  "resolveJsonModule": true,
-	  "skipLibCheck": true,
-	  "forceConsistentCasingInFileNames": true
-	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "dist", "test", "playground"]
-  }
-  
+  "compilerOptions": {
+    "target": "es5",
+    "rootDir": "src",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "declaration": true,
+    "esModuleInterop": true,
+    //"allowJs": true,
+    "alwaysStrict": true,
+    //"importHelpers": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "stripInternal": true,
+    "baseUrl": "."
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*", "dist", "test", "playground"]
+}
