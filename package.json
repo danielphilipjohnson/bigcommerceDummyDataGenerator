@@ -4,6 +4,10 @@
   "engines": {
     "node": ">16.13.0"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "module": "./dist/esm.index.js",
   "main": "./dist/cjs/index.js",
   "files": [
@@ -64,5 +68,10 @@
     "vite": "^2.7.2",
     "vitest": "^0.0.141",
     "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "i": "^0.3.7",
+    "npm": "^8.19.3",
+    "yargs": "^17.6.2"
   }
 }
