@@ -68,5 +68,8 @@
     "vite": "^2.7.2",
     "vitest": "^0.0.141",
     "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
