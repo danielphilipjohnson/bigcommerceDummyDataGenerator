@@ -1,63 +1,68 @@
 {
-	"name": "generate-dummy-bigcommerce-products-sdk",
-	"version": "0.0.1",
-	"engines": {
-		"node": ">16.13.0"
-	},
-	"module": "./dist/esm.index.js",
-	"main": "./dist/cjs/index.js",
-	"files": [
-		"dist/"
-	],
-	"description": "Typescript SDK for generating fake bigcommerce products.",
-	"scripts": {
-		"dev": "watch 'npm run build' ./src",
-		"play": "NODE_ENV=development watch 'npm run build && node ./playground/index.js' ./src ./playground",
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-		"test": "vitest",
-		"coverage": "vitest run --coverage",
-		"prepublish": "npm run build",
-		"lint": "eslint . --ext .js --ext .ts --fix",
-		"format": "prettier --write ./src/**/*.ts",
-		"prepare": "husky install"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git"
-	},
-	"author": "Daniel Philip Johnson",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git/issues"
-	},
-	"homepage": "https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git#readme",
-	"lint-staged": {
-		"**/*.{js,ts}": [
-			"npm run lint"
-		]
-	},
-	"devDependencies": {
-		"@babel/types": "^7.16.8",
-		"@faker-js/faker": "^7.6.0",
-		"@rollup/plugin-typescript": "^8.3.0",
-		"@rushstack/eslint-patch": "^1.1.0",
-		"@types/node": "^17.0.21",
-		"autoprefixer": "^9.8.6",
-		"c8": "^7.12.0",
-		"eslint": "^8.7.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"husky": "^8.0.2",
-		"jsdom": "^19.0.0",
-		"lint-staged": "^12.3.7",
-		"nodemon": "^2.0.15",
-		"prettier": "^2.6.2",
-		"prettier-eslint": "^13.0.0",
-		"pretty-quick": "^3.1.3",
-		"ts-node": "^10.7.0",
-		"typescript": "^4.5.5",
-		"vite": "^2.7.2",
-		"vitest": "^0.0.141",
-		"watch": "^1.0.2"
-	}
+  "name": "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">16.13.0"
+  },
+  "module": "./dist/esm.index.js",
+  "main": "./dist/cjs/index.js",
+  "files": [
+    "dist/"
+  ],
+  "description": "Typescript SDK for generating fake bigcommerce products.",
+  "scripts": {
+    "dev": "watch 'npm run build' ./src",
+    "play": "NODE_ENV=development watch 'npm run build && node ./playground/index.js' ./src ./playground",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepublish": "npm run build",
+    "lint": "eslint --ext .ts --fix",
+    "format": "prettier --write ./src/**/*.ts",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git"
+  },
+  "author": "Daniel Philip Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git/issues"
+  },
+  "homepage": "https://github.com/danielphilipjohnson/bigcommerceDummyDataGenerator.git#readme",
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "**/*.ts": [
+      "eslint --ext .ts"
+    ]
+  },
+  "devDependencies": {
+    "@babel/types": "^7.16.8",
+    "@faker-js/faker": "^7.6.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "autoprefixer": "^9.8.6",
+    "c8": "^7.12.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.2",
+    "jsdom": "^19.0.0",
+    "lint-staged": "^12.3.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "^13.0.0",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "~3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.5.5",
+    "vite": "^2.7.2",
+    "vitest": "^0.0.141",
+    "watch": "^1.0.2"
+  }
 }
