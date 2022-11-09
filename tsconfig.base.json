@@ -16,5 +16,5 @@
     // "noImplicitThis": true,
     "useUnknownInCatchVariables": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/__tests__/*", "dist", "test", "playground"]
 }

@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "rootDir": "src",
-    "outDir": "./dist",
     "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
     "declaration": true,
     "esModuleInterop": true,
-    //"allowJs": true,
     "alwaysStrict": true,
-    //"importHelpers": true,
     "strict": true,
     "strictNullChecks": true,
     "strictBindCallApply": true,
@@ -18,7 +16,15 @@
     "noImplicitThis": true,
     "useUnknownInCatchVariables": true,
     "stripInternal": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*", "dist", "test", "playground"]
