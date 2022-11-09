@@ -1,8 +1,8 @@
 import { faker } from '@faker-js/faker'
-import type { AvailabilityItems } from '../types'
+import type { AvailabilityItems, AvailabilityItemsValues } from '../types'
 
-export const getBigcommerceProductAvailability = () => {
-  const availability: AvailabilityItems = ['available', 'disabled', 'preorder']
+export const getBigcommerceProductAvailability = (): AvailabilityItemsValues => {
+  const availability: typeof AvailabilityItems = ['available', 'disabled', 'preorder']
   return availability[
     faker.datatype.number({
       min: 0,

@@ -3,10 +3,10 @@ import { generateBigcommerceCategoryArray } from '../helpers/generateBigcommerce
 import { generateBigcommerceCustomUrl } from '../helpers/generateBigcommerceCustomUrl'
 import { getBigcommerceProductAvailability } from '../helpers/getBigcommerceProductAvailability'
 import { getBigcommerceProductCondition } from '../helpers/getBigcommerceProductCondition'
-import type { ProductTypes } from '../types'
+import type { Product, ProductTypes } from '../types'
 import { generateBigcommerceImages } from './generateBigcommerceImages'
 
-export const createBigcommerceProduct = () => {
+export const createBigcommerceProduct = (): Product => {
   const id = faker.datatype.number({
     max: 1000000
   })
