@@ -1,4 +1,5 @@
-export type AvailabilityItems = ['available', 'disabled', 'preorder']
+export const AvailabilityItems = ['available', 'disabled', 'preorder'] as const
+export type AvailabilityItemsValues = typeof AvailabilityItems[number]
 
 export const Categories = {
   Books: 1,
@@ -27,7 +28,9 @@ export const Categories = {
 
 export type CategoryKeys = keyof typeof Categories
 
-export type Condition = ['new', 'used', 'refurbished']
+export const Condition = ['new', 'used', 'refurbished'] as const
+
+export type ConditionValues = typeof Condition[number]
 
 export type ImageUrl = [
   'https://placeimg.com/640/480/tech',
@@ -56,4 +59,69 @@ export interface ProductImage {
   url_standard: string
   url_thumbnail: string
   url_tiny: string
+}
+
+export type Product = {
+  id: number
+  name: string
+  type: ProductTypes
+  sku: string
+  description: string
+  price: string
+  cost_price: number
+  retail_price: number
+  sale_price: number
+  map_price: number
+  tax_class_id: number
+  product_tax_code: string
+  calculated_price: string
+  categories: number[]
+  brand_id: number
+  option_set_id: number
+  option_set_display: string
+  inventory_level: number
+  inventory_warning_level: number
+  inventory_tracking: string
+  reviews_rating_sum: number
+  reviews_count: number
+  total_sold: number
+  fixed_cost_shipping_price: string
+  is_free_shipping: boolean
+  is_visible: boolean
+  is_featured: boolean
+  related_products: number[]
+  warranty: string
+  search_keywords: string
+  availability: AvailabilityItemsValues
+  availability_description: string
+  gift_wrapping_options_type: string
+  gift_wrapping_options_list: []
+  sort_order: number
+  condition: ConditionValues
+  is_condition_shown: boolean
+  order_quantity_minimum: number
+  order_quantity_maximum: number
+  page_title: string
+  meta_keywords: []
+  meta_description: string
+  date_created: Date
+  date_modified: Date
+  view_count: number
+  preorder_release_date: null
+  preorder_message: string
+  is_preorder_only: boolean
+  is_price_hidden: boolean
+  price_hidden_label: string
+  custom_url: {
+    url: string
+    is_customized: boolean
+  }
+  base_variant_id: null
+  open_graph_type: 'product'
+  open_graph_title: string
+  open_graph_description: string
+  open_graph_use_meta_description: boolean
+  open_graph_use_product_name: boolean
+  open_graph_use_image: boolean
+  images: ProductImage[]
 }
