@@ -6,8 +6,8 @@ export const productsToJson = (filePath: string, amountOfProducts: number) => {
 
   writeFile(filePath, JSON.stringify(json), err => {
     if (err) {
-      return console.log(err)
+      throw err
     }
-    console.log('The file was saved!')
+    console.log(`${filePath} was saved!`)
   })
 }
